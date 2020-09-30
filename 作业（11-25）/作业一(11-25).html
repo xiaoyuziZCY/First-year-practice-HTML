@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#num{
+				border: 1px red solid;
+				cursor：pointer;
+				width: 100px;
+				height: 40px;
+				margin-top: 10px;
+				background-color: darkgoldenrod;
+				display: inline-block;
+				font-weight: 70px;
+				font-size: 30px;
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		请输入验证码：
+		<input type='text' id="input" />
+		<div id="num" onclick="num()"></div>
+	<button onclick="num1(ram)">开始</button>
+	</body>
+	<script>
+		var num =function(){
+			var a1 = new Array();
+				for(var i =0; i < 4; i++)
+				{
+					var x = Math.random()*74+48;
+					if(((57 < x)&&(x < 65))||((90 < x)&&(x < 97)))
+					{  
+						i--;
+						continue;
+					}  
+					a1 = a1+String.fromCharCode(x);
+				}   
+				document.getElementById("num").innerHTML = a1;
+				ram = a1;
+		}
+		num()
+		var num1 =function(){
+			var x = document.getElementById("input").value;
+			ram = ram.toLowerCase();
+				x = x.toLowerCase();
+			if(ram ==x){
+				alert('正确');
+			}else{
+				alert('错误');
+			}
+		}
+	</script>
+</html>

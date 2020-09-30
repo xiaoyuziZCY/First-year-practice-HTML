@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	
+		var a =2;
+		var b =3;
+		var ab =a+b;
+		console.log(ab)
+		
+		var c =2;
+		c++
+		console.log(c++)
+		
+		var d =0.5;
+		var e =1.5;
+		var de =d+e-e*d/e;
+		console.log(de)
+		
+		var f =95;
+		var g =2.5;
+		var fg =f+g;
+		console.log(fg)
+		
+		var a =3;
+		var b =4;
+		a +=b;/*a=7 b=4*/
+		a -=b;/*a=3 b=4*/
+		a *=2;/*a=6 b=4*/
+		a /=b;//*a=1.5 b=4*/
+		a %=b;/*a=0 b=4*/
+		
+		var h =19;
+		var res = h > 18 ? '成年':'未成年' ;
+		console.log(res)
+		
+		var i =17;
+		var j =18;
+		var res1 = i == j ? '相等':'不相等';
+		console.log(res1)
+		
+		var k ='小鱼子';
+		var l ='大鱼子';
+		var res2 = k == l ? '相同':'不相同';
+		
+		var m =1234;/*第九题看不懂问题*/
+		
+		var a =3;
+		var b =2;
+		var res3 =a++ * 2 < b-- % 3 && ++a % 2 > --b / 2;
+		/*res3=6<2 && 0>0.5*/
+		console.log(res3)/*false*/
+		var res4 =a++ * 2 < b-- % 3 || ++a % 2 > --b / 2;
+		/*res4=6<2 || 0>0.5*/
+		console.log(res4)/*true*/
+		
+		var m =3;
+		var n =2;
+		var res5 =m++ + --n + m-- / n--;
+		/*res5=8*/
+		console.log(res5)
+		var res6 =--m % n++ - m++ * 2 + n++ / 3;
+		/*res6=-3*/
+		console.log(res6)
+		
+		var o =1;
+		var res7 = o > 0 ? '正数':'负数';
+		var res8 = res7 == 0 ? '零':'非零数'
+		console.log(res7)
+		console.log(res8)
+	</script>
+</html>

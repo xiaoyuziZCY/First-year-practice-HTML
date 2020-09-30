@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.div1{
+				width: 700px;
+				height: 400px;
+				background-color:red;
+				margin: 0 auto;
+				position: relative;
+			}
+			#img1{
+				width: 700px;
+				height: 400px;
+			}
+			.div1 ul{
+				margin: 0px;
+				width: 120px;
+				left: 540px;
+				top: 360px;
+				position: absolute;
+			}
+			.div1 ul li{
+				float: left;
+				background-color: red;
+				text-align: center;
+				list-style: none;
+			}
+			.div1 ul li a{
+				color: black;
+				
+				font-size: 30px;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.div1 ul li a:hover{
+				color: blueviolet;
+			}
+			#left{
+				position: absolute;
+				left: 0;
+				top: 200px;
+				}
+			#right{
+				position: absolute;
+				right: 0;
+				top: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+		<img src="img/untitled.png" id="img1" />
+		<ul>
+			<li>
+				<a href="#">一</a>
+			</li>
+			<li>
+				<a href="#">二</a>
+			</li>
+			<li>
+				<a href="#">三</a>
+			</li>
+			<li>
+				<a href="#">四</a>
+			</li>
+		</ul>
+			<div id="left" style="cursor: pointer; background-color: darkgreen; width: 30px; height: 30px;">&lt;</div>
+			<div id="right" style="cursor: pointer; background-color: darkgreen; width: 30px; height: 30px;">&gt;</div>
+		</div>
+	</body>
+	<script>
+			var left1 = document.getElementById("left");
+			var right1 = document.getElementById("right");
+			left1.onclick = function(){
+				index--;
+				if(index == -1){
+					index = lis.length-1;
+				}
+				img.src = "img/img00"+index+".jpg";
+				abc();
+			}
+	var img =["untitled.png","u=860248692,420928694&fm=26&gp=0.jpg","u=64720630,2836718459&fm=11&gp=0.jpg","u=1243129987,1212172617&fm=11&gp=0.jpg"]
+	var a1=document.getElementsByTagName("li");
+	var a2 = 0;
+	for(var i=0;i<a1.length;i++){
+		a1[i].tag=i;
+			a1[i].onclick = function(){
+		var val=this.innerText;
+		var img = document.getElementById("img1");
+		a2=this.tag;
+		img.src="img/"+img[a2];
+		abc()
+	}
+		}
+	var abc =function(){
+		for(var j=0;j<a1.length;j++){
+			a1[j].style.backgroundColor="pink";
+			}
+		a1[a2].style.backgroundColor="red";
+	}
+	var b = setInterval("zcy()",3000);
+	var zcy =function(){
+				a2++;
+				if(a2==img.length){
+					a2=0;
+				}
+				document.getElementById("img1").src="img/"+img[a2];
+				abc();
+			}
+	</script>
+</html>

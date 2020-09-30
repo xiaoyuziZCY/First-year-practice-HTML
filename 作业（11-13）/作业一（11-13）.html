@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	/*作业1*/
+		for(var a =1 ; a <= 100 ; a++){
+			if(a % 7 ==0){
+			console.log(a)
+			}
+		}
+		/*作业2*/
+		for(var b =1 ; b<=5 ; b++){
+			if(b ==1){
+			num =31;
+			continue
+			}
+			else if(b ==2){
+			num1 =29 + num;
+			continue
+			}
+			else if(b ==3){
+			num2 =31 + num1;
+			continue
+			}
+			else if(b ==4){
+			num3 =30 + num2;
+			continue
+			}
+			else{
+			num4 =31 + num3;
+			}
+			console.log(num4)
+		}
+		/*作业3*/
+		var c1 =0;
+		for(var c =1; c <=12; c +=2){
+			if(c > 8){
+			c1 =c1 + 30;
+			continue
+			}else{
+			c1 =c1 + 31;
+			continue
+			}
+		}
+		console.log(c1)
+		/*作业4*/
+		for(var d =100; d <=200; d++){
+		if(d % 3 ==1 && d % 4 ==2 && d % 5 ==3){
+		console.log(d)
+		}
+		}
+		/*作业6*/
+		var x = 0,y = 0;
+		for(x = 0; x <= 150; x++){
+			for(y = 0; y <= 150; y++){
+				if((parseInt(x / y)==3 && x % y ==10) &&  x + y ==150){
+					console.log(x);
+					console.log(y);
+				}
+			}
+		}
+		/*作业7*/
+		for(var e =1000; e <=9999; e++){
+			if(e ==3 * (e % 1000)){
+				console.log(e)
+			}
+		}
+		/*作业8*/
+		for(var f =1; f <=500; f++){
+			if((parseInt(f / 100)!=4)&&
+				(parseInt(f % 100 / 10)!=4) && (f % 100 % 10 !=4)){
+				console.log(f)
+			}
+		}
+		/*作业9*/
+		for( var man =1; man<450; man++){
+			for(var wom=1; wom<450; wom++){
+				if(((man*75+wom*80.1)/(man+wom)==76)&&
+					(((man+wom)>=380)&&((man+wom)<=450))){
+					console.log(man)
+					console.log(wom)
+				}
+			}
+		}
+	</script>
+</html>

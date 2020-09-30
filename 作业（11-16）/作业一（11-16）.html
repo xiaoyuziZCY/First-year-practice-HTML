@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			</script>
+			<style type="text/css">
+		#abc{
+			width: 200px;
+			height: 50px;
+		}
+		#qwe{
+				width: 200px;
+				height: 50px;
+			}
+		#asd{
+				height: 50px;
+			}
+		#button{
+			height: 50px; background:yellow
+		}
+		</style>
+	</head>
+	<body>
+	<input id="abc" type="text" placeholder='请输入数字' />
+	<select id="asd">
+		<option selected="selected">+</option>
+	      	<option>-</option>
+	      	<option>*</option>
+	      	<option>/</option>
+	</select>
+	<input id="qwe" type="text" placeholder="请输入数字" />
+	<button id="button" onclick="i()">=</button>
+	</body>
+	<script>
+		/*作业1*/
+		var a =1900;
+		while(a <=2017){
+			if(a % 400 ==0 || a % 4 ==0 && a % 100 !=0){
+				console.log(a)
+				a++;
+			}
+			a++
+		}
+		/*作业2*/
+		console.log('----------')
+		var b=1,c=1,out=0;
+		while(b <=101){
+			if(c % 2 ==0)
+			{
+				out=out-b;
+			}
+			else
+			{
+				out=out+b;
+			}
+			c++
+			b +=2;
+		}
+		console.log(out)
+		//作业3===============================================
+		console.log("----------------")
+		var d =2;
+		while(d <=100){
+			if(d % 1 ==0 || d % d ==0){
+				console.log(d)
+				d++
+			}
+			d++
+		}
+		/*作业4*/
+		console.log('-----------')
+		for(var e =0; e <100; e++){
+			for(var e1 =0; e1 <100; e1++){
+				for(var e2 =0; e2 <100; e2++){
+					if(e / 3 + e1 * 5 + e2 * 3 ==100 && e + e1 + e2 ==100){
+						console.log('公的数量')
+						console.log(e1)
+						console.log('母的数量')
+						console.log(e2)
+						console.log('小的数量')
+						console.log(e)
+						console.log('---------------------------')
+					}
+				}
+			}
+		}
+		//作业5
+		var f =0.08,count =0;
+		for(f =0.08; f<=8848130; f *=2){
+			count++
+		}
+		console.log(count)
+		//作业6
+		console.log('---------------')
+		var g =100,bai,shi,ge;
+		for(g =100; g <=999; g++){
+			bai=parseInt(g/100);
+			shi=parseInt(g % 100 / 10);
+			ge=g % 10;
+			if(bai * bai * bai + shi * shi * shi + ge * ge * ge ==g){
+				console.log(g)
+			}
+		}
+		/*作业7*/
+		console.log('-------------')
+		document.write("<br/>")
+		for(h =0; h < 5; h++){
+			h1 =h;
+			for(h1; h1 <4; h1++){
+				document.write("&nbsp;&nbsp;")
+			}
+			for(var h2 =0;h2 <=h; h2++){
+				document.write("*")
+			}
+			for(h2 =0; h2 < h; h2++){
+				document.write("*")
+			}
+			for(h1; h1 < 4; h1++){
+				document.write("&nbsp;&nbsp;")
+			}
+			document.write("<br/>")
+		}
+		for(h =3; h >=0; h--){
+			h1 =h;
+			for(h1; h1 < 4; h1++){
+				document.write("&nbsp;&nbsp;")
+			}
+			for(h2 =0; h2 < h; h2++){
+				document.write("*")
+			}
+			for(var h2 =0;h2 <=h; h2++){
+				document.write("*")
+			}
+			for(h1; h1 <4; h1++){
+				document.write("&nbsp;&nbsp;")
+			}
+			document.write("<br/>")
+		}
+		/*作业8*/
+		console.log('------------------')
+		function i(){
+			var i,j,k,l,s;
+			k=document.getElementById('abc');
+			l=document.getElementById('qwe');
+			s=document.getElementById('asd');
+			abc=parseInt(k.value);
+			qwe=parseInt(l.value);
+			asd=s.value;
+			if(asd=='+'){
+				i = abc + qwe;
+			}
+			if(asd=='-'){
+				i =abc - qwe;
+			}
+			if(asd=='✖'){
+				i =abc * qwe
+			}
+			if(asd=='➗'){
+				i =abc / qwe
+			}
+			console.log(i);
+		}
+		</script>
+</html>

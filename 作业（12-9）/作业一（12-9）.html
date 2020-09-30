@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#abc{
+				width: 400px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>您可输入十个字符</h1>
+		<input id="abc" type="text" value=""/><br />
+		<span id="zcy"></span>
+	</body>
+	<script>
+		var abc = document.getElementById('abc');
+		var zcy = document.getElementById('zcy');
+		abc.addEventListener('keyup',function(){
+			var val = abc.value;
+			console.log(val.length);
+			var count = 10 - val.length;
+			if(count > 0){
+				zcy.innerHTML='您还可输入'+count+'个字符';
+				zcy.style.color='black';
+			}else{
+				zcy.innerHTML = "您已不可输入字符了";
+				zcy.style.color='red';
+				alert('输入的字符已达上限')
+				abc.value = val.substring(0, 10);
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 50px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		
+	</body>
+	<script>
+		var div1 = document.getElementById('div1');
+		document.addEventListener('mousemove',function(evt){
+			var a1 = evt;
+			console.log(a1.clientX+","+a1.clientY);
+			div1.style.left =a1.clientX+'px';
+			div1.style.top =a1.clientY+'px';
+		})
+	</script>
+</html>

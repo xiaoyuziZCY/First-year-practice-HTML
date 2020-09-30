@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	/*作业2*/
+		var num =function(a,b){
+			var count= 0;
+			for(var a1 =a; a1 <=b; a1++){
+				var flag = true;
+				for(var b1 = 2;b1 <= Math.sqrt(a1);b1++){
+					if(a1 % b1 == 0){
+						flag = false;
+						break;
+					}
+					if(flag){
+						count++;
+					console.log(a1);
+					}
+				}
+			}
+			console.log(a+"-"+b+",之间的素数的数量是："+count);
+		}
+		num(2,10)
+		/*作业3*/
+		var num1 =function(){
+			var g =100,bai,shi,ge;
+		for(g =100; g <=999; g++){
+			bai=parseInt(g/100);
+			shi=parseInt(g % 100 / 10);
+			ge=g % 10;
+			if(bai * bai * bai + shi * shi * shi + ge * ge * ge ==g){
+				console.log(g)
+			}
+		}
+		}
+		num1()
+		/*作业4没有*/
+		/*作业5*/
+		var num2 =function(){
+				for(var i = 1;i < 100;i++){
+				var a = parseInt(i / 10);//十
+				var b = i % 10;//个
+				if(i % 7 == 0 || a == 7 || b == 7){
+					console.log(i);
+				}
+			}
+		}
+		num2()
+		/*作业6*/
+		var num3=function(){
+			var a1 =2000,b1;
+			if(a1 <=2019){
+				b1 +=360;
+				a1++;
+			}else{
+				b1 +=300;
+				return b1;
+			}
+		}
+		console.log(num3());
+		/*作业7*/
+		var num4=function(n){
+		var a =1;
+		b =1;
+		c =0;
+		for(var i =3; i <=n; i++){
+			c =a + b;
+			a =b;
+			b =c;
+		}
+		console.log(c)
+		}
+		num4(12)
+		/*作业8*/
+		var num6=function(n){
+			document.write("<table border='1' cellspacing='0'>")
+			for(var i= 1;i <= n;i++){
+			document.write('<tr>')
+			document.write('<td>')
+			document.write(i)
+			document.write('</td>')
+			document.write('</tr>')
+		}
+			document.write('</table>')
+		}
+		num6(10)
+		/*作业9*/
+		var num5=function(){
+			while(true){
+				var qwe =confirm('hey man?');
+				if(qwe){
+					alert('fuck you');
+					break;
+				}
+			}
+		}
+		num5()
+	</script>
+</html>

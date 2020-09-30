@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		请输入男方姓名：
+		<input type="text" id="name1" /><br />
+		请输入女方姓名：
+		<input type="text" id="name2" /><br />
+		<button onclick="a1()">开始测验</button>
+	</body>
+	<script>
+	/*作业2*/
+		console.log(parseInt(Math.random()*54)+34)
+	/*作业3*/
+		console.log(parseInt(Math.random()*45)+55)
+	/*作业4*/
+		var m =Math.random()
+		var num1=function(){
+			if(parseInt(m*5) ==0){
+				console.log('丞相')
+			}
+			else if(parseInt(m*5) ==1){
+				console.log('太监')
+			}
+			else if(parseInt(m*5) ==2){
+				console.log('娘娘')
+			}
+			else if(parseInt(m*5) ==3){
+				console.log('丫鬟')
+			}
+			else{
+				console.log('麽麽')
+			}
+			}
+			num1()
+		/*作业5：猜数游戏*/
+		document.write('<h1>请输入一个[1,50]之间的整数：</h1>')
+		document.write("<input id='abc' type='text' placeholder='请输入数字'/>")
+		document.write("<button onclick='abc()'>猜数</button>")
+		var n =parseInt(Math.random()*51)+1,k;
+			k=document.getElementById('abc');
+			abc=parseInt(k.value);
+		var abc=function(){
+			if(k ==n){
+				alert('猜对了');
+			}else{
+				alert('猜错了')
+			}
+		}
+		/*作业6：测姻缘*/
+		function a1(){
+			var name1 =document.getElementById('name1').value;
+			var name2 =document.getElementById('name2').value;
+			if(name1.length <= 0 || name1 ==null || name2.length < 0 || name2 ==null){
+				alert('请输入姓名');
+				return;
+			}
+			var sum =0;
+			for(var i =0; i < name1.length; i++){
+				sum +=name1.charCodeAt(i);
+			}
+			for(var i =0; i < name2.length; i++){
+				sum +=name2.charCodeAt(i);
+			}
+			if(sum > 100){
+				sum %=100;
+			}
+			alert(name1+'和'+name2+',你们的姻缘指数为'+sum)
+		}
+	</script>
+</html>

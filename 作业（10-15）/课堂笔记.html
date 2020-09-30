@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2019-10-15
+        	描述：
+        	1、样式的优先级:
+
+A：相同的选择器，优先级是相同的，如果重复设置，后面的样式会覆盖前面的。
+
+B：继承来的样式和标签选择器
+
+	标签选择器的优先级 > 继承来的样式
+
+C：标签选择器和类选择器比较
+
+	类选择器的优先级>标签选择器
+
+D：类选择器和id选择器比较
+
+	id选择器的优先级>类选择器
+
+E：id选择器和行内样式比较
+
+	行内样式>id选择器
+	结论：行内样式>id选择器>类选择器>标签选择器>继承来的
+	F：分组选择器和单一选择器：
+
+	如果选择器相同，后面的样式会覆盖前面的样式
+
+	h3，p{}
+
+	p{}
+
+G：!important：词义是重要的，提升优先级
+
+H：包含选择器的优先级：
+
+	约分法：相同类型的选择器消除，看剩余的选择器的优先级
+	
+       2、盒子模型
+
+div，p。。。看成是容器：盒子
+
+盒子里面装的：内容content
+
+	width，height
+
+内容到边缘的距离：内边距padding
+
+	padding：1个值/2个值(上下和左左右)/4个值(顺时针：上，右，下，左)
+
+	padding-left，
+
+	padding-top，
+
+	padding-right，
+
+	padding-bottom，
+
+盒子的边缘：边框border
+
+	border：3px solid red；
+
+		border-style
+
+		border-width，
+
+		border-color，
+
+
+
+	border-top，
+
+		border-top-style，
+
+		border-top-color，
+
+		border-top-width，
+
+	border-left，
+
+		border-left-style，
+
+		border-left-color，
+
+		border-left-width，
+
+	border-right，
+
+		border-right-style，
+
+		border-fight-color，
+
+		border-right-width，
+
+	border-bottom，
+
+		border-bottom-style，
+
+		border-bottom-color，
+
+		border-bottom-width，
+
+
+
+盒子和其他盒子的距离：外边距margin
+
+	margin：1个值/2个值/4个值(上右下左)	
+
+
+
+	margin-top，
+
+	margin-left，
+
+	margin-right，
+
+	margin-bottom，
+
+
+
+以div为例，padding，border，margin，width，height
+
+	div：宽度=border-left + padding-left + width+padding-right + border-right
+
+	div在整个页面上的宽度：还要加外边距：margin-left和margin-right
+
+	div：高度=border-top + padding-top + height + padding-bottom + border-bottom
+
+	div在整个页面的高度：外边距，在垂直上会合并。
+
+
+        -->
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	/*作业2*/
+		  var abc=function(n){
+		  	var a =0;
+		  	for(var a1 =1; a1 <= n; a1++){
+		  		a +=a1
+		  	}
+		  	console.log(a)
+		  }
+		  abc(5);
+		  /*作业3*/
+		 var zxc=function(n){
+		 		if(n % 4 ==0 && n % 100 !=0 || n % 400 ==0){
+		 			console.log('该年份为闰年')
+		 		}else{
+		 			console.log('该年份为平年')
+		 		}
+		 }
+		 zxc(2004);
+		 /*作业4*/
+		var cba=function(n){
+		  	var c =1;
+		  	for(var c1 =1; c1 <= n; c1++){
+		  		c *=c1
+		  	}
+		  	console.log(c)
+		  }
+		cba(4);
+		/*作业5*///此作业需要掌握高一内容的三角函数知识
+		var cba1=function(a,b,c){
+			if((a + b) <=c || (a + c) <=b || (b + c) <=a){
+				return '信息错误';
+			}else{//三角面积=二分之一的(b×c×sina)
+				//也即求出sina的值
+				//sina=Math.sqrt (1-cosa×cosa)
+				//也即求cosa
+				var S,sina,cosa;
+				cosa =(b * b + c * c - a * a) / (2 * a * b);
+				sina =Math.sqrt (1 - cosa * cosa);
+				S =(b * c * sina) / 2;
+				return S;
+			}
+		}
+		console.log(cba1(3,4,5))
+		/*作业6*/
+		var num=function(x,y){
+			if(x > y){
+				console.log(x)
+			}else if(x < y){
+				console.log(y)
+			}else{
+				console.log('信息错误')
+			}
+		}
+		num(1,2)
+		/*作业7*/
+		var num1=function(x,y){
+				var z,c;
+				if(x ==0 || y ==0)
+				{
+					return 0;
+				}
+				if(x < 0)
+				{
+					x =-x;
+				}
+				if(y < 0)
+				{
+					y =-y;
+				}
+				
+				if(x ==y)
+				{
+					return x;
+				}
+				else{
+					var i=(x,y);
+					for(z =i / 2; z > 0; z--)
+					{
+						if(x % z ==0 && y % z ==0)
+						{
+							return z;
+						}
+					}
+				}
+			}
+		console.log(num1(18,12))
+		/*作业8*/
+		/*作业9*/
+		function num5(a,b){
+			for(var i =1;i <=a; i++){
+				for(var j =0; j < b; j++){
+					document.write('*');
+				}
+				document.write('<br />');
+			}
+		}
+		num5(3,4);
+	</script>
+</html>
